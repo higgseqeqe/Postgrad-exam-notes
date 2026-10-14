@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表单</title>
 </head>
+
 <body>
     <h2>表单</h2>
+    <p>表单：是用于收集用户数据，并将数据提交到后端进行处理</p>
+    <img src="./img/0d2e5264c7140265f3f6a91b7c48744c.png" alt="">
+
+    <p>表单容器<br> form 包含action</p>
+    <p>表单控件 <br>
+        input 通用输入控件 <br>
+        textarea 多行文本输入框 <br>
+        select 下拉选择框 <br>
+        button 自定义按钮 <br>
+    </p>
+
+    <p>辅助标签 <br>
+        label 关联输入控件的文本标签，提升可访问性
+    </p>
+
+    <p>表单容器</p>
+    <form action="">
+        <!-- 单行文本框和密码 -->
+        <ul>
+            <li>
+                账号：<input type="text" placeholder="请输入账号" name="username" accesskey="s" autocomplete="additional-name">
+            </li>
+            <li>
+                密码：<input type="password" placeholder="请输入密码" name="psw" maxlength="6">
+            </li>
+            <li>
+                性别：
+                <label for="women">女</label>
+                <input type="radio" id="women" name="gender" value="0" checked>
+                <label>男
+                    <input type="radio" name="gender" value="1">
+                </label>
+                
+            </li>
+            <li>
+                爱好
+                <input type="checkbox" name="hobby" value="0" checked>足球
+                <input type="checkbox" name="hobby" value="1">篮球
+                <input type="checkbox" name="hobby" value="2">双色球
+
+            </li>
+            <li>
+                头像
+                <input type="file" name="file
+                " multiple>
+            </li>
+
+        </ul>
+
+        <ul>
+            <li>
+                评论
+                <textarea name="msg" id="1" placeholder="请输入你的想法" rows="5" cols="60"></textarea>
+            </li>
+            <li>
+                <!-- 表单控件 -->
+                <select name="" id="">
+                    <option value="北京">北京</option>
+                    <option value="深圳">深圳</option>
+                    <option value="上海">上海</option>
+                    <option value="广东">广东</option>
+                </select>
+            </li>
+            <li>
+                <button>登录</button> 
+
+            </li>
+        </ul>
+
+        <!-- label是用户界面某个元素的说明，提升可访问性（点击标签可聚焦输入框） -->
+
+    </form>
+
+
+    <h2>字符实体</h2>
+    <img src="./img/20007bb7b522e35348c01864ab3a4578.png" alt="">
+
+
+
+
 </body>
+
 </html>
