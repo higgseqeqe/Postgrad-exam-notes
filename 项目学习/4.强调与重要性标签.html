@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>强调与重要性标签</title>
+</head>
+<body>
+    <h1>强调与重要性标签</h1>
+    <p>这些标签不仅影响文字的默认显示效果，还表达内容的含义。选择标签时，应先考虑语义。</p>
+
+    <h2>重要性：strong</h2>
+    <p>strong 表示内容具有较强的重要性、严肃性或紧迫性，浏览器默认显示为加粗。</p>
+    <p>示例：<strong>提交前，请确认信息填写正确。</strong></p>
+    <pre><code>&lt;strong&gt;提交前，请确认信息填写正确。&lt;/strong&gt;</code></pre>
+
+    <h2>强调：em</h2>
+    <p>em 表示语气上的强调，浏览器默认显示为斜体。强调的位置不同，句子的重点也会不同。</p>
+    <p>示例：我说的是<em>今天</em>完成。</p>
+    <pre><code>我说的是&lt;em&gt;今天&lt;/em&gt;完成。</code></pre>
+
+    <h2>插入的内容：ins</h2>
+    <p>ins 表示文档中新插入或新增的内容，浏览器默认显示为下划线。</p>
+    <p>示例：学习计划新增了<ins>每天复习十分钟</ins>。</p>
+    <pre><code>&lt;ins&gt;每天复习十分钟&lt;/ins&gt;</code></pre>
+
+    <h2>删除的内容：del</h2>
+    <p>del 表示文档中已删除的内容，浏览器默认显示为删除线。</p>
+    <p>示例：会议时间由<del>周一</del>改为<ins>周二</ins>。</p>
+    <pre><code>会议时间由&lt;del&gt;周一&lt;/del&gt;改为&lt;ins&gt;周二&lt;/ins&gt;。</code></pre>
+
+    <h2>容易混淆的地方</h2>
+    <ul>
+        <li>strong 侧重内容的重要性，em 侧重语气上的强调。</li>
+        <li>ins 和 del 表示内容的增删，不应仅为了下划线或删除线效果而使用。</li>
+        <li>b 表示需要引起注意的文字，i 可表示术语、其他语言的短语等；它们也有语义，但不表示 strong 的重要性或 em 的语气强调。</li>
+        <li>默认显示效果可以通过 CSS 修改。只需要改变外观时，应使用 CSS。</li>
+    </ul>
+
+    <h2>注释标签</h2>
+    <p>HTML 注释用于说明代码，浏览器不会把注释内容显示在页面上，但可以在源代码中查看。</p>
+    <pre><code>&lt;!-- 我是注释 --&gt;</code></pre>
+    <!-- 我是注释 -->
+</body>
+</html>

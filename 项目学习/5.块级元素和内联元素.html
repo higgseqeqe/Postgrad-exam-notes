@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素和内联元素</title>
+</head>
+<body>
+    <h1>块级元素和内联元素</h1>
+    <p>学习时，可以按默认显示方式把常见元素分为块级元素和内联元素（也叫行内元素）。这主要描述它们在页面中的布局表现。</p>
+
+    <h2>块级元素</h2>
+    <ul>
+        <li>在普通文档流中，通常从新的一行开始排列。</li>
+        <li>宽度为 auto 时，通常占满父容器的可用宽度。</li>
+        <li>通常可以通过 CSS 设置宽度和高度。</li>
+        <li>常见元素：div、p、h1～h6、ul、ol、li。</li>
+    </ul>
+    <div>这是第一个 div。</div>
+    <div>这是第二个 div，默认从新的一行开始。</div>
+    <pre><code>&lt;div&gt;这是第一个 div。&lt;/div&gt;
+&lt;div&gt;这是第二个 div。&lt;/div&gt;</code></pre>
+
+    <h2>内联元素</h2>
+    <ul>
+        <li>通常与文字一起排列，一行可以放多个；空间不足时会换行。</li>
+        <li>通常只占据内容所需的宽度。</li>
+        <li>普通非替换内联元素（如 span）的 width 和 height 通常不生效。</li>
+        <li>常见元素：span、a、strong、em。</li>
+    </ul>
+    <p>同一段文字中，可以放置<span>普通片段</span>、<strong>重要内容</strong>和<em>强调内容</em>。</p>
+    <pre><code>&lt;p&gt;这是一段&lt;strong&gt;重要内容&lt;/strong&gt;。&lt;/p&gt;</code></pre>
+
+    <h2>嵌套规则不能只看显示方式</h2>
+    <p>能否嵌套取决于 HTML 元素的内容规则，不能简单理解为“块级元素可以包含任意元素”。</p>
+    <ul>
+        <li>div 可以包含 p、其他 div 等元素。</li>
+        <li>p 可以包含文本、span、strong 等，但不能包含 div、另一个 p 或标题元素。</li>
+        <li>a 可以在符合内容规则时包裹块级内容，但不能再嵌套另一个 a。</li>
+    </ul>
+
+    <h2>显示方式可以通过 CSS 改变</h2>
+    <p>display: block 表示块级显示；display: inline 表示内联显示；display: inline-block 允许元素在行内排列，同时设置宽度和高度。</p>
+    <p>img 默认参与行内排列，但属于替换元素，可以设置宽度和高度。</p>
+    <p>记住：改变 display 会改变布局表现，不会改变元素的语义或 HTML 嵌套规则。</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像标签及格式</title>
+</head>
+<body>
+    <h1>图像标签及格式</h1>
+
+    <h2>图像标签的基本使用</h2>
+    <p>img 用于在页面中插入图片，是空元素（通常称为单标签），不需要结束标签。</p>
+    <img src="image-3.png" alt="学习笔记图片" style="max-width: 100%; height: auto;">
+    <pre><code>&lt;img src="image-3.png" alt="学习笔记图片"&gt;</code></pre>
+
+    <h2>常用属性</h2>
+    <ul>
+        <li>src：指定图片地址，可以使用相对路径或完整的网络地址。</li>
+        <li>alt：提供图片的文字替代说明，供屏幕阅读器使用，也可在图片无法显示时提供信息。</li>
+        <li>width：设置图片宽度；HTML 属性值使用不带单位的整数，以 CSS 像素计。</li>
+        <li>height：设置图片高度，写法与 width 相同。</li>
+        <li>title：提供补充提示，桌面浏览器通常在鼠标悬停时显示；不能替代 alt。</li>
+    </ul>
+    <p>alt 应简洁描述图片的内容或用途。纯装饰图片使用 alt=""，让辅助工具跳过它。</p>
+
+    <h2>图片路径</h2>
+    <ul>
+        <li>image-3.png：图片与当前 HTML 文件在同一个文件夹。</li>
+        <li>images/photo.jpg：图片在当前文件夹下的 images 文件夹中。</li>
+        <li>../photo.jpg：图片在上一级文件夹中。</li>
+    </ul>
+    <p>路径中使用正斜杠 /，并注意文件名、扩展名和大小写。图片不显示时，先检查路径是否正确。</p>
+
+    <h2>图片尺寸</h2>
+    <p>页面中的显示尺寸通常用 CSS 调整。保持原始比例可以避免图片被拉伸变形。</p>
+    <pre><code>&lt;img src="image-3.png" alt="学习笔记图片"
+     style="max-width: 100%; height: auto;"&gt;</code></pre>
+    <p>max-width: 100% 让图片不超出容器宽度，height: auto 让高度按比例调整。</p>
+    <p>如果知道图片的原始宽高，可以同时填写 width 和 height 属性，帮助浏览器提前预留空间，减少加载时的页面跳动。</p>
+
+    <h2>常见的图片格式</h2>
+    <ul>
+        <li>JPEG / JPG：同一种格式，常用于照片；采用有损压缩，不支持透明背景。</li>
+        <li>PNG：采用无损压缩，支持透明背景，常用于截图和需要清晰边缘的图像。</li>
+        <li>GIF：支持简单动画和有限的透明效果，每帧最多 256 种颜色。</li>
+        <li>WebP：支持有损和无损压缩、透明背景及动画。</li>
+        <li>AVIF：支持透明背景，通常有较高的压缩效率；实际效果取决于图片内容和编码设置。</li>
+        <li>SVG：矢量格式，放大后仍能保持清晰，适合图标、标志和简单图形。</li>
+    </ul>
+    <p>记住：修改文件扩展名不会转换图片格式，需要使用图片工具进行转换。</p>
+</body>
+</html>
