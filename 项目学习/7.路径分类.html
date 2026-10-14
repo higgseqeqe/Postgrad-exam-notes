@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路径分类</title>
+</head>
+<body>
+    <h1>路径分类</h1>
+    <p>路径用于指定图片、样式表或网页等文件的位置。常见路径分为相对路径和绝对路径。</p>
+    <h2>一、当前文件夹结构</h2>
+    <pre>考研学习笔记/
+├── 1.计算机网络体系结构.md
+├── 2.计算机组成 原理 王道版.md
+├── 3.数据结构.md
+├── 笔记图片/                  ← Markdown 笔记的图片
+│   └── image-3.png
+└── 项目学习/
+    ├── 6图像标签及格式.html
+    ├── 7.路径分类.html
+    └── img/                  ← 项目学习自己的图片
+        ├── image-3.png
+        └── HTML文档结构关系图 马会.png</pre>
+    <h2>二、相对路径</h2>
+    <p>相对路径以当前文件所在的文件夹为起点。./ 表示当前目录，../ 表示上一级目录。</p>
+    <ul>
+        <li>同一级：<code>6图像标签及格式.html</code>。</li>
+        <li>下一级：<code>img/image-3.png</code>，访问项目自己的图片。</li>
+        <li>上一级：<code>../1.计算机网络体系结构.md</code>，定位根目录的笔记文件。</li>
+    </ul>
+    <pre><code>&lt;img src="img/image-3.png" alt="项目学习示例图片"&gt;</code></pre>
+    <img src="img/image-3.png" alt="项目学习示例图片" style="max-width: 100%; height: auto;">
+    <p>根目录的 Markdown 笔记引用自己的图片时，写成：</p>
+    <pre><code>![图片说明](笔记图片/image-3.png)</code></pre>
+    <h2>三、绝对路径</h2>
+    <p>绝对路径提供完整位置，例如本机文件地址 <code>file:///C:/Users/chengling/Desktop/考研学习笔记/项目学习/img/image-3.png</code>，或完整网络地址 <code>https://example.com/images/photo.jpg</code>。</p>
+    <p>本机绝对路径依赖电脑上的具体位置，移动文件夹或换电脑后可能失效。本项目内部使用相对路径，整体移动文件夹时更方便。</p>
+    <h2>四、检查路径</h2>
+    <ul>
+        <li>路径使用正斜杠 /，文件名和扩展名应与实际文件一致。</li>
+        <li>笔记图片放入“笔记图片”，项目图片放入“项目学习/img”，分别管理。</li>
+        <li>即使两个文件夹中存在同名图片，它们也是不同文件，引用时要写对目录。</li>
+        <li>移动图片后，需要同时更新 Markdown 的图片链接或 HTML 的 src 属性。</li>
+    </ul>
+</body>
+</html>

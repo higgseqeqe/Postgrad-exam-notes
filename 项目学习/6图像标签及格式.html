@@ -10,8 +10,8 @@
 
     <h2>图像标签的基本使用</h2>
     <p>img 用于在页面中插入图片，是空元素（通常称为单标签），不需要结束标签。</p>
-    <img src="image-3.png" alt="学习笔记图片" style="max-width: 100%; height: auto;">
-    <pre><code>&lt;img src="image-3.png" alt="学习笔记图片"&gt;</code></pre>
+    <img src="img/image-3.png" alt="学习笔记图片" style="max-width: 100%; height: auto;">
+    <pre><code>&lt;img src="img/image-3.png" alt="学习笔记图片"&gt;</code></pre>
 
     <h2>常用属性</h2>
     <ul>
@@ -25,7 +25,7 @@
 
     <h2>图片路径</h2>
     <ul>
-        <li>image-3.png：图片与当前 HTML 文件在同一个文件夹。</li>
+        <li>img/image-3.png：图片在当前 HTML 文件所在目录下的 img 文件夹中。</li>
         <li>images/photo.jpg：图片在当前文件夹下的 images 文件夹中。</li>
         <li>../photo.jpg：图片在上一级文件夹中。</li>
     </ul>
@@ -33,7 +33,7 @@
 
     <h2>图片尺寸</h2>
     <p>页面中的显示尺寸通常用 CSS 调整。保持原始比例可以避免图片被拉伸变形。</p>
-    <pre><code>&lt;img src="image-3.png" alt="学习笔记图片"
+    <pre><code>&lt;img src="img/image-3.png" alt="学习笔记图片"
      style="max-width: 100%; height: auto;"&gt;</code></pre>
     <p>max-width: 100% 让图片不超出容器宽度，height: auto 让高度按比例调整。</p>
     <p>如果知道图片的原始宽高，可以同时填写 width 和 height 属性，帮助浏览器提前预留空间，减少加载时的页面跳动。</p>
