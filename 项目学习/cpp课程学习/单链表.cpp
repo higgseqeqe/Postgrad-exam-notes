@@ -101,7 +101,7 @@ bool DeleteNode (LNode *p){
     p->data=p->next->data;
     p->next =q->next;
     delete q;
-    return ture;
+    return true;
 
 }
 
