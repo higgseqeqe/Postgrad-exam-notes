@@ -2,7 +2,7 @@
 
 
 
-![alt text](image-23.png)
+![alt text](笔记图片/image-23.png)
 
 ```C++
 class Solution {
@@ -24,7 +24,7 @@ public:
 };
 ```
 
-![alt text](image-24.png)
+![alt text](笔记图片/image-24.png)
 
 ```C++
 class Solution {
@@ -49,7 +49,7 @@ public:
 };
 ```
 
-![alt text](image-57.png)
+![alt text](笔记图片/image-57.png)
 
 ```C++
 /**
@@ -76,7 +76,7 @@ public:
     }
 };
 ```
-![alt text](image-92.png)
+![alt text](笔记图片/image-92.png)
 ```C++
 class Solution {
 public:
