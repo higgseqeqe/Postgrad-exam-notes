@@ -124,3 +124,123 @@ public:
     }
 };
 ```
+![alt text](image-14.png)
+```c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+
+    void dfs(TreeNode *root,vector<int> &vec){
+        if(root!=nullptr){
+            vec.push_back(root->val);
+            dfs(root->left,vec);
+            dfs(root->right,vec);
+        }
+    }
+
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> vec;
+        dfs(root,vec);
+        return vec;
+    }
+};
+```
+![alt text](image-15.png)
+```C++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    void dfs(TreeNode * root,vector<int> &vec){
+        if(root!=nullptr){
+            dfs(root->left,vec);
+            vec.push_back(root->val);
+            dfs(root->right,vec);
+        }
+    }
+
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> vec;
+        dfs(root,vec);
+        return vec;
+    }
+};
+```
+![alt text](image-16.png)
+```C++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    void dfs(TreeNode * root,vector<int> &vec){
+        if(root!=nullptr){
+           
+            dfs(root->left,vec);
+            dfs(root->right,vec);
+            
+            vec.push_back(root->val);
+        }
+    }
+
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> vec;
+        dfs(root,vec);
+        return vec;
+    }
+};
+```
+![alt text](image-20.png)
+```C++
+vector<vector<int>> levelOrder(TreeNode* root) {
+        queue<TreeNode*> q;
+        vector<vector<int>> res;
+        if (root == nullptr) return res;
+
+        q.push(root);
+        while(!q.empty()){
+
+            int size =q.size();
+            vector<int> vec;
+            for(int i=0;i<size;i++){
+            TreeNode* p = q.front();
+            q.pop();
+            vec.push_back(p->val);
+           
+            if(p->left)
+                q.push(p->left);
+            if(p->right)
+                q.push(p->right);
+            }
+            res.push_back(vec);
+        }
+        return res;
+    }
+```
