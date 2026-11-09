@@ -244,3 +244,29 @@ vector<vector<int>> levelOrder(TreeNode* root) {
         return res;
     }
 ```
+![alt text](image-28.png)
+```C++
+class Solution {
+public:
+    vector<int> rightSideView(TreeNode* root) {
+        queue<TreeNode*> q;
+        vector<int> res;
+        if(root ==nullptr) return res;
+        q.push(root);
+        while(!q.empty()){
+            int size =q.size();
+            for(int i = 0;i<size;i++){
+                TreeNode *p=q.front();
+                q.pop();
+                if(i==size-1)
+                    res.push_back(p->val);
+                if(p->left)
+                    q.push(p->left);
+                if(p->right)
+                    q.push(p->right);
+            }
+        }
+        return res;
+    }
+};
+```
