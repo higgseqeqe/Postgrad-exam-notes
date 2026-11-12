@@ -270,3 +270,92 @@ public:
     }
 };
 ```
+![alt text](image-30.png)
+![alt text](image-29.png)
+
+```C++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
+        vector<vector<int>> res;
+        queue<TreeNode *> q;
+        if(root == nullptr) return res; 
+        q.push(root);
+        while(!q.empty()){
+            int size =q.size();
+            vector<int> vec;
+            for(int i=0;i<size;i++){
+                TreeNode *p=q.front();
+                q.pop();
+                vec.push_back(p->val);
+
+                if(p->left)
+                q.push(p->left);
+                if(p->right)
+                q.push(p->right);
+            }
+                res.push_back(vec);
+            }
+            reverse(res.begin(),res.end());
+            return res;
+        }
+        
+    
+};
+```
+![alt text](image-51.png)
+```C++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        queue<TreeNode *> q;
+        vector<vector<int>> res;
+        if(root ==nullptr)
+        return res;
+        q.push(root);
+        int level =0;
+        while(!q.empty()){
+            int size =q.size();
+            vector<int> level_res;
+            for(int i=0;i<size;i++){
+                TreeNode *p =q.front();
+                 q.pop();
+                
+                level_res.push_back(p->val);
+                if(p->left)
+                    q.push(p->left);
+                if(p->right)
+                    q.push(p->right);
+            }
+            if(level%2 ==1){
+                reverse(level_res.begin(), level_res.end());
+            }
+            res.push_back(level_res);
+            level++;
+        }
+        return res;
+    }
+};
+```
